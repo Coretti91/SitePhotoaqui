@@ -1,0 +1,241 @@
+/* Salve este arquivo como "admin-fix.css" */
+
+/* Estilos Complementares para o Painel Administrativo PhotoAqui */
+
+:root {
+  --primary: #3a86ff;
+  --primary-light: #82b6ff;
+  --primary-dark: #0a58ca;
+  --secondary: #ff006e;
+  --accent: #ffbe0b;
+  --success: #38b000;
+  --warning: #f48c06;
+  --danger: #dc2f02;
+  --info: #00b4d8;
+  --neutral-50: #ffffff;
+  --neutral-100: #f8f9fa;
+  --neutral-200: #e9ecef;
+  --neutral-300: #dee2e6;
+  --neutral-600: #6c757d;
+  --neutral-700: #495057;
+  --neutral-800: #343a40;
+  --neutral-900: #212529;
+}
+
+/* Gerenciamento de Produtos */
+.product-list {
+  margin-bottom: 20px;
+}
+
+.product-item {
+  padding: 15px;
+  border-bottom: 1px solid var(--neutral-200);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 15px;
+}
+
+.product-item:hover {
+  background-color: var(--neutral-100);
+}
+
+.product-thumbnail {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--neutral-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.product-category {
+  font-size: 14px;
+  color: var(--neutral-600);
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.product-status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.status-in-stock {
+  background-color: rgba(56, 176, 0, 0.1);
+  color: var(--success);
+}
+
+.status-low-stock {
+  background-color: rgba(244, 140, 6, 0.1);
+  color: var(--warning);
+}
+
+.status-out-stock {
+  background-color: rgba(220, 47, 2, 0.1);
+  color: var(--danger);
+}
+
+.product-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.action-btn {
+  background-color: var(--neutral-200);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background-color: var(--neutral-300);
+}
+
+.action-btn.edit {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.action-btn.edit:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.action-btn.delete {
+  background-color: rgba(220, 47, 2, 0.1);
+  color: var(--danger);
+}
+
+.action-btn.delete:hover {
+  background-color: var(--danger);
+  color: white;
+}
+
+/* Gerenciamento de Banners */
+.banner-list {
+  margin-bottom: 20px;
+}
+
+/* Formulários */
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--neutral-300);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.1);
+}
+
+.form-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--neutral-300);
+  border-radius: 4px;
+  font-size: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23343a40' d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px 12px;
+  appearance: none;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--neutral-300);
+  border-radius: 4px;
+  font-size: 14px;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-check-input {
+  margin-right: 8px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Fix para botões */
+button {
+  cursor: pointer;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+  .product-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .product-thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .product-actions {
+    justify-content: flex-start;
+  }
+}
